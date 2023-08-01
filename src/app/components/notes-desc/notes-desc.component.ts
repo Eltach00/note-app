@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-notes-desc',
@@ -7,4 +7,9 @@ import { Component, Input } from '@angular/core';
 })
 export class NotesDescComponent {
   @Input() desc: string
+  @Output() onDelete = new EventEmitter<true>()
+
+  delete() {
+    this.onDelete.emit(true);
+  }
 }

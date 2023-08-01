@@ -21,6 +21,10 @@ export class AppComponent {
   init() {
     const dataFromStorage = JSON.parse(localStorage.getItem('notesData'))  as INote[]
     this.data = dataFromStorage || INITDATA
+    this.chooseFisrt()
+  }
+
+  chooseFisrt() {
     this.desc = this.data[0].description;
     this.chosen = this.data[0].id
   }
@@ -35,5 +39,11 @@ export class AppComponent {
     const index = this.data.push(note);
     this.desc = this.data[index - 1].description;
     localStorage.setItem('notesData', JSON.stringify(this.data));
+  }
+
+  deleteNote() {
+    this.data = this.data.filter((n) => n.id !== this.chosen)
+    localStorage.setItem('notesData', JSON.stringify(this.data));
+    this.chooseFisrt()
   }
 }

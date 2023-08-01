@@ -8,5 +8,5 @@
     (onChange)="onChanged($event)"
     [chosen]="chosen"
   ></app-side-bar>
-  <app-notes-desc [desc]="desc"></app-notes-desc>
+  <app-notes-desc [desc]="desc" (onDelete)="deleteNote()"></app-notes-desc>
 </div>
