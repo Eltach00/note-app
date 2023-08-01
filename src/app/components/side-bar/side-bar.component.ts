@@ -8,7 +8,9 @@ import { INote } from 'src/app/models/note.interface';
 })
 export class SideBarComponent {
   @Input() data: INote[];
+  @Input() chosen: number;
   @Output() onChange = new EventEmitter<number>();
+
 
   constructor() {
   }
