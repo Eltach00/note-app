@@ -22,9 +22,7 @@ form {
     padding: 15px;
     width: 15%;
     font-size: 1rem;
-    &::placeholder {
-      text-align: center;
-    }
+    text-align: center;
     @media screen and (max-width: 780px) {
       font-size: 12px;
       padding: 10px;
