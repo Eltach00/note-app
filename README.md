@@ -1,5 +1,9 @@
 # NoteApp
 
+# Deploy link
+
+https://note-app-eltach00.vercel.app/
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.0.2.
 
 ## Development server
