@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-notes-desc',
@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./notes-desc.component.scss']
 })
 export class NotesDescComponent {
-
+  @Input() desc: string
 }

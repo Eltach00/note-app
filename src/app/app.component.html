@@ -1,3 +1,9 @@
 <app-header></app-header>
-<app-side-bar></app-side-bar>
-<app-notes-desc></app-notes-desc>
+<app-add-note (onAdd)="addNewNote($event)"></app-add-note>
+<div class="container">
+  <app-side-bar
+    [data]="data"
+    (onChange)="onChanged($event)"
+  ></app-side-bar>
+  <app-notes-desc [desc]="desc"></app-notes-desc>
+</div>

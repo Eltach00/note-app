@@ -1,1 +1,7 @@
-<p>side-bar works!</p>
+<div>
+  <ul>
+    <li *ngFor="let item of data" (click)="onClick(item.id)">
+      {{item.title}}
+    </li>
+  </ul>
+</div>
