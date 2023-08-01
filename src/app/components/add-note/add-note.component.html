@@ -1,5 +1,5 @@
 <form [formGroup]="noteForm" (ngSubmit)="addNote()">
   <input formControlName="title"  placeholder="Заголовок" />
-  <input formControlName="description"  placeholder="Описание" />
+  <textarea formControlName="description"  placeholder="Описание" ></textarea>
   <button type="submit">Добавить Новую Заметку</button>
 </form>

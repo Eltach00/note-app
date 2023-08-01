@@ -6,23 +6,22 @@ import { INITDATA } from './data/testData';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  data: INote[] = INITDATA
-  desc: string = this.data[0].description
-  newNote: string
+  data: INote[] = INITDATA;
+  desc: string = this.data[0].description;
 
   constructor(private title: Title) {
-    this.title.setTitle('Make notes for sure')
+    this.title.setTitle('Make notes for sure');
   }
 
   onChanged(id: number) {
-    this.desc = this.data.find( n => n.id === id).description
+    this.desc = this.data.find((n) => n.id === id).description;
   }
 
   addNewNote(note: INote) {
-    this.data.push(note)
+    const index = this.data.push(note);
+    this.desc = this.data[index - 1].description;
   }
-
 }
