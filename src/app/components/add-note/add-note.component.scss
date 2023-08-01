@@ -5,8 +5,8 @@ form {
   align-items: center;
   gap: 10px;
   @media screen and (max-width: 780px) {
-       flex-wrap: wrap;
- }
+    flex-wrap: wrap;
+  }
   textarea {
     width: 30%;
     resize: none;
@@ -14,8 +14,8 @@ form {
     height: 100px;
     font-size: 1rem;
     @media screen and (max-width: 780px) {
-       order: 1;
-       width: 70%;
+      order: 1;
+      width: 70%;
     }
   }
   input {
@@ -26,17 +26,18 @@ form {
     @media screen and (max-width: 780px) {
       font-size: 12px;
       padding: 10px;
+      width: 30%;
     }
   }
-  button{
+  button {
     padding: 15px;
     background-color: #333;
     color: #fff;
     font-weight: 500;
     font-size: 1rem;
     &:hover {
-    background-color: #333333dc;
-    cursor: pointer;
+      background-color: #333333dc;
+      cursor: pointer;
     }
   }
 }
