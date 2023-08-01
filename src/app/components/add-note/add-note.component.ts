@@ -32,6 +32,7 @@ export class AddNoteComponent {
       const data: INote = this.noteForm.value;
       data.id = Math.random();
       this.onAdd.emit(data);
+      this.noteForm.reset()
     }
   }
 }
